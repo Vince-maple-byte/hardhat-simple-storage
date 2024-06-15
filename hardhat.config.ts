@@ -17,6 +17,12 @@ const config: HardhatUserConfig = {
             accounts: [SEPOLIA_PRIVATE_KEY!],
             chainId: 11155111,
         },
+        //How to make a localhost in hardhat
+        //Make sure to run npx hardhat node to create a node in one shell
+        localhost: {
+            url: "http://127.0.0.1:8545/",
+            chainId: 31337,
+        },
     },
     solidity: "0.8.24",
     etherscan: {

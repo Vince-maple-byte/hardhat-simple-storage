@@ -16,12 +16,12 @@ const main = async () => {
     );
     //console.log(network.config);
 
-    if (network.config.chainId === 11155111 && process.env.ETHERSCAN_API_KEY) {
-        //This would confirm if the transaction has been mined at least 6 times so that we know that etherscan has read this transcation
-        simpleStorage.deploymentTransaction()?.wait(6);
-        const address: string = await simpleStorage.getAddress();
-        verify(address, []);
-    }
+    // if (network.config.chainId === 11155111 && process.env.ETHERSCAN_API_KEY) {
+    //     //This would confirm if the transaction has been mined at least 6 times so that we know that etherscan has read this transcation
+    //     simpleStorage.deploymentTransaction()?.wait(6);
+    //     const address: string = await simpleStorage.getAddress();
+    //     verify(address, []);
+    // }
 
     //Interacting with the smart contract is the same as in ethers.js
     const currentValue = await simpleStorage.retrieve();
