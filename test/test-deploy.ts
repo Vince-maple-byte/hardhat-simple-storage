@@ -24,4 +24,12 @@ describe("SimpleStorage", () => {
         const expectedValue = "5";
         assert.equal(currentValue.toString(), expectedValue);
     });
+
+    //We can have multiple asserts inside of one it method.
+    it("Should successfully add a new person called John with a favorite number of 3", async () => {
+        await simpleStorage.addPerson("John", 3);
+        const [favoriteNumber, name] = await simpleStorage.people(0); //How you get an element in an array from a smart contract
+        assert.equal(name, "John");
+        assert.equal(favoriteNumber.toString(), "3");
+    });
 });

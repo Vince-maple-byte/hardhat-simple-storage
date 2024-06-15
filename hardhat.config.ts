@@ -33,7 +33,7 @@ const config: HardhatUserConfig = {
     //This gives us an idea of the amount of gas/cost our smart contracts would spend from our tests
     gasReporter: {
         currency: "USD",
-        L1: "fantom",
+        L1: "polygon",
         coinmarketcap: COINMARKET_API_KEY!,
     },
 };
